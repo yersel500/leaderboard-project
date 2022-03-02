@@ -38,8 +38,15 @@ form,
 }
 
 .container-name,
-.title-container {
+.title-container,
+form,
+input {
   width: 90%;
+}
+
+input,
+button {
+  padding: 0.4rem;
 }
 
 .unit-score:nth-child(even) {
