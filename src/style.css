@@ -1,7 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .hello {
   color: red;
 }
 
 body {
   background-color: bisque;
+}
+
+.container,
+.container-score,
+.container-input,
+form,
+.container-name,
+.title-container {
+  display: flex;
+  border: 2px solid red;
+  flex: 1;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-input,
+form,
+.container-name,
+.container-score {
+  flex-direction: column;
+}
+
+.container {
+  align-items: flex-start;
 }
