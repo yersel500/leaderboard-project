@@ -3,13 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-.hello {
-  color: red;
-}
-
-body {
-  background-color: bisque;
-}
 
 .container,
 .container-score,
@@ -18,7 +11,6 @@ form,
 .container-name,
 .title-container {
   display: flex;
-  border: 2px solid red;
   flex: 1;
   gap: 0.5rem;
   align-items: center;
@@ -34,4 +26,18 @@ form,
 
 .container {
   align-items: flex-start;
+  padding: 1rem 3rem;
+}
+
+.unit-score {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.container-name {
+  width: 90%;
+}
+
+.unit-score:nth-child(even) {
+  background-color: rgb(173, 172, 172);
 }
