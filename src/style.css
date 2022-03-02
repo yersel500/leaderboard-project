@@ -14,7 +14,7 @@ form,
   flex: 1;
   gap: 0.5rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .container-input,
@@ -26,6 +26,9 @@ form,
 
 .container {
   align-items: flex-start;
+}
+
+.main-title {
   padding: 1rem 3rem;
 }
 
@@ -34,7 +37,8 @@ form,
   padding: 0.5rem;
 }
 
-.container-name {
+.container-name,
+.title-container {
   width: 90%;
 }
 
