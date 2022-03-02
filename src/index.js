@@ -1,14 +1,18 @@
-import _ from 'lodash';
 import './style.css';
+import {
+  inputName, inputScore, theForm, theContainer,
+} from './modules/selectors.js';
 
-function component() {
-  const element = document.createElement('div');
+theForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // action when submit the form
+  const myName = inputName.value;
+  const myScore = inputScore.value;
 
-  // Lodash, now improted by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+  if (myName !== '' && myScore !== '') {
+    const scoreContainer = document.createElement('div');
+    scoreContainer.classList.add('unit-score');
+    scoreContainer.innerHTML = `${myName}: ${myScore}`;
+    theContainer.appendChild(scoreContainer);
+  }
+});

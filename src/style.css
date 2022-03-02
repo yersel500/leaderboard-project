@@ -1,7 +1,54 @@
-.hello {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background-color: bisque;
+.container,
+.container-score,
+.container-input,
+form,
+.container-name,
+.title-container {
+  display: flex;
+  flex: 1;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-input,
+form,
+.container-name,
+.container-score {
+  flex-direction: column;
+}
+
+.container {
+  align-items: flex-start;
+}
+
+.main-title {
+  padding: 1rem 3rem;
+}
+
+.unit-score {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.container-name,
+.title-container,
+form,
+input {
+  width: 90%;
+}
+
+input,
+button {
+  padding: 0.4rem;
+}
+
+.unit-score:nth-child(even) {
+  background-color: rgb(173, 172, 172);
 }
