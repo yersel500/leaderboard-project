@@ -25,10 +25,18 @@ export async function showData(container) {
     container.removeChild(container.firstChild);
   }
   const { result } = await getData();
-  result.forEach((gamer) => {
+  result.sort((a,b) => b.score-a.score);
+  result.forEach((gamer, index) => {
     const scoreContainer = document.createElement('div');
     scoreContainer.classList.add('unit-score');
-    scoreContainer.innerHTML = `${gamer.user}: ${gamer.score}`;
+    scoreContainer.innerHTML = `<p>${index+1}</p><p>${gamer.user}</p><p>${gamer.score}</p>`;
     container.appendChild(scoreContainer);
   });
+
+  // result.forEach((gamer) => {
+  //   const scoreContainer = document.createElement('div');
+  //   scoreContainer.classList.add('unit-score');
+  //   scoreContainer.innerHTML = `<p>1</p><p>${gamer.user}</p><p>${gamer.score}</p>`;
+  //   container.appendChild(scoreContainer);
+  // });
 }

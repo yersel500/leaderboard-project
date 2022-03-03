@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style-type: none;
+}
+
 .container,
 .container-score,
 .container-input,
 form,
 .container-name,
-.title-container {
+.title-container,
+.head-table,
+.unit-score {
   display: flex;
   flex: 1;
   gap: 0.5rem;
@@ -39,6 +45,7 @@ form,
 
 .container-name,
 .title-container,
+.head-table,
 form,
 input {
   width: 90%;
