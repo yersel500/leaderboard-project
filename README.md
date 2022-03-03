@@ -15,9 +15,11 @@ The leaderboard website displays scores submitted by different players. It also 
 
 ### First requirements:
 
-Project requirements 1
+Project requirements
 
-- Implement the structure of Leaderboard project
+- Implement the structure of Leaderboard project.
+- Connect the API to send and get data.
+- Style the learboard following the wireframe.
 
 
 > To setup the project on your machine:
@@ -38,7 +40,7 @@ To get a local copy up and running follow these simple example steps.
 - Open terminal
 - Change the directory you want put the repo
 - Then run
-  i. Run git clone git@github.com:mengiefen/awesome-books.git
+  i. Run git clone
   ii. cd repo-name/
 
 ### Install
@@ -63,7 +65,59 @@ To get a local copy up and running follow these simple example steps.
 - **ESLint** linter
   - `npx eslint .` on the root of your directory of your project.
 
-### Second requirements:
+## API Service
+The project is using an API service to send and get the data.
+
+Our URL parameter is: `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lMefZ0gh9HW9MoCXepfi/scores/`
+
+### POST method
+
+Mandatory parameters for POST action:
+
+- user: name of the user
+- score: points (number)
+
+Parameters example for POST action (sent in the body of the request in JSON format):
+
+```json
+{ 
+	"user": "John Doe",
+	"score": 42
+}
+```
+
+Return value for POST action:
+
+```json
+{
+	"result": "Leaderboard score created correctly."
+}
+```
+
+### GET method
+
+Parameters for GET action: none
+
+Return value for GET action:
+
+```json
+{
+    "result": [
+        {
+            "user": "John Doe",
+            "score": 42
+        },
+        {
+            "user": "Peter Parker",
+            "score": 35
+        },
+        {
+            "user": "Wonder Woman",
+            "score": 50
+        }
+    ]
+}
+```
 
 ## Built With
 

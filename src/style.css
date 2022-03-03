@@ -4,12 +4,30 @@
   box-sizing: border-box;
 }
 
+body {
+  background: url("./assets/polygon-luminary.svg");
+  color: aliceblue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container-name {
+  border: 2px solid white;
+}
+
 .container,
 .container-score,
 .container-input,
 form,
 .container-name,
-.title-container {
+.title-container,
+.head-table,
+.unit-score {
   display: flex;
   flex: 1;
   gap: 0.5rem;
@@ -39,6 +57,7 @@ form,
 
 .container-name,
 .title-container,
+.head-table,
 form,
 input {
   width: 90%;
@@ -50,5 +69,41 @@ button {
 }
 
 .unit-score:nth-child(even) {
-  background-color: rgb(173, 172, 172);
+  background-color: rgb(108, 61, 236);
+}
+
+input {
+  caret-color: blue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgb(18, 167, 55);
+  color: #fff;
+}
+
+.refresh:hover,
+.submit:hover {
+  background-color: rgb(7, 92, 28);
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container-name,
+  .title-container,
+  .head-table,
+  form,
+  input {
+    width: 100%;
+  }
 }
